@@ -1,0 +1,14 @@
+[
+  {"split": "random",     "method": "baseline",  "accuracy": 87.53, "precision": 96.92, "recall": 77.53, "f1": 86.15, "yes_ratio": 40.00, "tp": 1163, "fp": 37,  "tn": 1463, "fn": 337, "n_total": 3000},
+  {"split": "random",     "method": "opera",     "accuracy": 87.07, "precision": 96.80, "recall": 76.67, "f1": 85.57, "yes_ratio": 39.60, "tp": 1150, "fp": 38,  "tn": 1462, "fn": 350, "n_total": 3000},
+  {"split": "random",     "method": "vcd",       "accuracy": 80.37, "precision": 98.61, "recall": 61.60, "f1": 75.83, "yes_ratio": 31.23, "tp": 924,  "fp": 13,  "tn": 1487, "fn": 576, "n_total": 3000},
+  {"split": "random",     "method": "combined",  "accuracy": 79.77, "precision": 98.59, "recall": 60.40, "f1": 74.91, "yes_ratio": 30.63, "tp": 906,  "fp": 13,  "tn": 1487, "fn": 594, "n_total": 3000},
+  {"split": "popular",    "method": "baseline",  "accuracy": 85.90, "precision": 93.11, "recall": 77.53, "f1": 84.61, "yes_ratio": 41.63, "tp": 1163, "fp": 86,  "tn": 1414, "fn": 337, "n_total": 3000},
+  {"split": "popular",    "method": "opera",     "accuracy": 85.70, "precision": 93.57, "recall": 76.67, "f1": 84.28, "yes_ratio": 40.97, "tp": 1150, "fp": 79,  "tn": 1421, "fn": 350, "n_total": 3000},
+  {"split": "popular",    "method": "vcd",       "accuracy": 79.60, "precision": 96.25, "recall": 61.60, "f1": 75.12, "yes_ratio": 32.00, "tp": 924,  "fp": 36,  "tn": 1464, "fn": 576, "n_total": 3000},
+  {"split": "popular",    "method": "combined",  "accuracy": 79.13, "precision": 96.59, "recall": 60.40, "f1": 74.32, "yes_ratio": 31.27, "tp": 906,  "fp": 32,  "tn": 1468, "fn": 594, "n_total": 3000},
+  {"split": "adversarial","method": "baseline",  "accuracy": 83.83, "precision": 88.71, "recall": 77.53, "f1": 82.75, "yes_ratio": 43.70, "tp": 1163, "fp": 148, "tn": 1352, "fn": 337, "n_total": 3000},
+  {"split": "adversarial","method": "opera",     "accuracy": 83.60, "precision": 89.01, "recall": 76.67, "f1": 82.38, "yes_ratio": 43.07, "tp": 1150, "fp": 142, "tn": 1358, "fn": 350, "n_total": 3000},
+  {"split": "adversarial","method": "vcd",       "accuracy": 78.30, "precision": 92.49, "recall": 61.60, "f1": 73.95, "yes_ratio": 33.30, "tp": 924,  "fp": 75,  "tn": 1425, "fn": 576, "n_total": 3000},
+  {"split": "adversarial","method": "combined",  "accuracy": 77.80, "precision": 92.64, "recall": 60.40, "f1": 73.12, "yes_ratio": 32.60, "tp": 906,  "fp": 72,  "tn": 1428, "fn": 594, "n_total": 3000}
+]

@@ -1,0 +1,14 @@
+[
+  {"split": "random",     "method": "baseline",  "accuracy": 87.53, "precision": 96.92, "recall": 77.53, "f1": 86.15, "yes_ratio": 40.00},
+  {"split": "random",     "method": "combined",  "accuracy": 79.77, "precision": 98.59, "recall": 60.40, "f1": 74.91, "yes_ratio": 30.63},
+  {"split": "random",     "method": "adaptive",  "accuracy": 87.40, "precision": 97.95, "recall": 76.40, "f1": 85.84, "yes_ratio": 39.07},
+  {"split": "random",     "method": "rper",      "accuracy": 87.60, "precision": 96.45, "recall": 78.27, "f1": 86.45, "yes_ratio": 40.60},
+  {"split": "popular",    "method": "baseline",  "accuracy": 85.90, "precision": 93.11, "recall": 77.53, "f1": 84.61, "yes_ratio": 41.63},
+  {"split": "popular",    "method": "combined",  "accuracy": 79.13, "precision": 96.59, "recall": 60.40, "f1": 74.32, "yes_ratio": 31.27},
+  {"split": "popular",    "method": "adaptive",  "accuracy": 85.73, "precision": 93.93, "recall": 76.40, "f1": 84.26, "yes_ratio": 40.67},
+  {"split": "popular",    "method": "rper",      "accuracy": 86.10, "precision": 92.80, "recall": 78.67, "f1": 85.18, "yes_ratio": 42.37},
+  {"split": "adversarial","method": "baseline",  "accuracy": 83.83, "precision": 88.71, "recall": 77.53, "f1": 82.75, "yes_ratio": 43.70},
+  {"split": "adversarial","method": "combined",  "accuracy": 77.80, "precision": 92.64, "recall": 60.40, "f1": 73.12, "yes_ratio": 32.60},
+  {"split": "adversarial","method": "adaptive",  "accuracy": 83.57, "precision": 89.18, "recall": 76.40, "f1": 82.30, "yes_ratio": 42.87},
+  {"split": "adversarial","method": "rper",      "accuracy": 84.07, "precision": 88.53, "recall": 78.80, "f1": 83.37, "yes_ratio": 44.60}
+]
