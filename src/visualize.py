@@ -12,14 +12,15 @@ import matplotlib.patches as mpatches
 import numpy as np
 
 
-METHOD_ORDER  = ["baseline", "opera", "vcd", "combined", "adaptive", "rper"]
+METHOD_ORDER  = ["baseline", "opera", "vcd", "combined", "adaptive", "rper", "maver"]
 METHOD_LABELS = {
     "baseline": "Baseline",
     "opera":    "OPERA-lite",
     "vcd":      "VCD-lite",
     "combined": "Naive Combined",
     "adaptive": "Adaptive Routing\n(paper)",
-    "rper":     "RPER\n(ours, improved)",
+    "rper":     "RPER\n(Stage 3)",
+    "maver":    "MAVER\n(ours, best)",
 }
 COLORS = {
     "baseline": "#4C72B0",
@@ -28,6 +29,7 @@ COLORS = {
     "combined": "#8172B2",
     "adaptive": "#CCB974",
     "rper":     "#64B5CD",
+    "maver":    "#E76F51",
 }
 
 

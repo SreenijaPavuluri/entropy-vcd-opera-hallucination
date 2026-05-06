@@ -1,8 +1,12 @@
 """
 POPE benchmark evaluation harness.
 
-Loads any split (random / popular / adversarial), runs all five Stage-1
-conditions plus Stage-2 adaptive and Stage-2 RPER improved routing,
+Loads any split (random / popular / adversarial), runs all methods:
+  Stage 1 : baseline, vcd, opera, combined
+  Stage 2 : adaptive (entropy-guided routing, paper Algorithm 1)
+  Stage 3 : rper (Recall-Preserved Entropy Routing)
+  Stage 4 : maver (Multi-Scale Adaptive VCD with Extended Routing)
+
 and saves results to JSON + a metrics CSV.
 """
 
@@ -24,6 +28,7 @@ from .opera_lite import opera_predict
 from .combined import combined_predict
 from .adaptive_routing import adaptive_predict
 from .improved_routing import rper_predict
+from .maver import maver_predict
 
 
 @dataclass
@@ -107,11 +112,11 @@ def evaluate_split(
     """
     Evaluate all requested methods on a single POPE split.
 
-    methods: list from {"baseline","vcd","opera","combined","adaptive","rper"}
+    methods: list from {"baseline","vcd","opera","combined","adaptive","rper","maver"}
              defaults to all.
     """
     if methods is None:
-        methods = ["baseline", "vcd", "opera", "combined", "adaptive", "rper"]
+        methods = ["baseline", "vcd", "opera", "combined", "adaptive", "rper", "maver"]
 
     images, questions, labels = load_pope_split(annotation_path, image_dir)
 
@@ -140,6 +145,8 @@ def evaluate_split(
                 p, _ = adaptive_predict(model, img, q)
             elif method == "rper":
                 p, _ = rper_predict(model, img, q)
+            elif method == "maver":
+                p, _ = maver_predict(model, img, q)
             else:
                 raise ValueError(f"Unknown method: {method}")
 

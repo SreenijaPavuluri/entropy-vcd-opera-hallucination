@@ -43,7 +43,7 @@ def parse_args():
     p.add_argument("--max_samples",  type=int, default=None,
                    help="Limit samples per split (None = full 3000)")
     p.add_argument("--methods",      nargs="+",
-                   default=["baseline", "vcd", "opera", "combined", "adaptive", "rper"],
+                   default=["baseline", "vcd", "opera", "combined", "adaptive", "rper", "maver"],
                    help="Methods to evaluate")
     p.add_argument("--splits",       nargs="+",
                    default=["random", "popular", "adversarial"])
@@ -106,6 +106,7 @@ def main():
     from src.combined       import combined_predict
     from src.adaptive_routing import adaptive_predict
     from src.improved_routing import rper_predict
+    from src.maver import maver_predict
 
     all_results = []
 
@@ -128,6 +129,7 @@ def main():
                 elif method == "combined":  p = combined_predict(model, img, q)
                 elif method == "adaptive":  p, _ = adaptive_predict(model, img, q)
                 elif method == "rper":      p, _ = rper_predict(model, img, q)
+                elif method == "maver":     p, _ = maver_predict(model, img, q)
                 else: raise ValueError(f"Unknown method: {method}")
                 preds.append(p)
 
